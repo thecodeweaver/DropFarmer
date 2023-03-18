@@ -73,6 +73,9 @@ while (1)
             if ($response->decoded_content =~ m/"isLiveBroadcast":true/ and
                 $response->decoded_content =~ m/<span>DropsEnabled<\/span>/)
             {
+                # TODO: figure out difference between channel with drops on and channel with drops off
+                # Since LWP is only fetching HTML
+                
                 # Channel is live and has drops enabled
                 # Launch browser to collect drops
                 print("Channel " . $channel . " is live and has drops on!\n");
